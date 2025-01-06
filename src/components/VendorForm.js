@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "./VendorForm.css";
+import PersonIcon from '@mui/icons-material/Person';
 
 const VendorForm = () => {
   const initialValues = {
@@ -150,22 +151,24 @@ const VendorForm = () => {
               </div>
             </div>
             <div className="basic-section-profile">
-              <h2>image</h2>
+              <div style={{width:"50%" , marginTop:"10%"}}>
+              <PersonIcon style={{ fontSize: 40, color: 'deepskyblue', height:"210px", width:"210px", backgroundColor:"lightgray", border:"1px solid black" }} />
+              <input type="file" id="file" className="file-upload" accept="image/*" />
+              <label htmlFor="file" className="custom-file-upload">Browse</label>
+              </div>
             </div>
           </div>
 
-          {/* <div className="form-section">
+          <div className="form-section">
             <h3>Statutory</h3>
             <div className="form-group">
-              <label>Registration Date</label>
-              <Field name="registrationDate" type="date" className="form-control" />
+              <label>GST</label>
+              <Field name="gst" className="form-control" />
             </div>
 
             <div className="form-group">
-              <label>GST Category</label>
+              <label>Registeration Date</label>
               <Field name="gstCategory" as="select" className="form-control">
-                <option value="Registered">Registered</option>
-                <option value="Unregistered">Unregistered</option>
               </Field>
             </div>
 
@@ -178,7 +181,7 @@ const VendorForm = () => {
               <label>CIN</label>
               <Field name="cin" className="form-control" />
             </div>
-          </div> */}
+          </div>
 
           <button type="submit" className="submit-button">
             Submit
