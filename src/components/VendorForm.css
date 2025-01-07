@@ -1,87 +1,143 @@
-/* VendorForm.css */
 .vendor-form {
-    width: 80%;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .form-section {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    margin-bottom: 15px;
-    justify-content: space-between;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-control {
-    width: 55%;
-    padding: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-checkbox {
-    margin-left: 10px;
-  }
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-  
-  .submit-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .basic-section {
-    display: flex;
-    width:100%;
-  }
-  .basic-section-details{
-    width:60%
-  }
-  /* YourStylesheet.css */
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 55%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.gst-suspend {
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width:auto
+}
+.form-checkbox {
+  margin-left: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.basic-section {
+  display: flex;
+  width:100%;
+}
+.basic-section-details{
+  width:60%
+}
+/* YourStylesheet.css */
 .basic-section-profile {
-    width: 40%;
-    text-align: center; /* Centers text */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 40%;
+  text-align: center; /* Centers text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .file-upload {
-    display: none; /* Hide the default file input */
+  display: none; /* Hide the default file input */
 }
 
 .custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .custom-file-upload:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3; /* Darker shade on hover */
+}
+.book-section{
+display:flex;
+ gap:15px;
+justify-content:flex-start;
+  align-items:center
+}
+.custom-style {
+width: 72% !important;
+}
+.gst-btn{
+width:80px;
+height:32px;
+background-color:rgba(9, 75, 128, 0.993);
+border:none;
+border-radius:2px;
+color: white
+}
+.custom-field{
+width: 86% !important
+}
+.custom-select-field{
+width: 90% !important
+}
+.custom-select-field-farm{
+width: 58% !important
+}
+.add-icon{
+background-color: rgba(9, 75, 128, 0.993);
+color: white;
+width: 35px;
+height: 33px;
+padding: 0;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center 
+}
+
+.statutory-main-div{
+display: flex;
+ height: 150px;
+  gap:20px;  
+align-items:center 
+}
+.statutory-inner-main-div{
+display: flex;
+width: 50%;
+height: 100%; 
+flex-direction: column
 }
