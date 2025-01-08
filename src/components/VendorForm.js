@@ -11,24 +11,58 @@ import CreateIcon from '@mui/icons-material/Create';
 import { Logistics } from "./Logistics";
 
 const VendorForm = () => {
-  const initialValues = {
-    gstNo: "",
-    name: "",
-    printName: "",
-    identification: "",
-    code: "",
-    underLedger: "",
-    vendorCommon: false,
-    isSubVendor: false,
-    firmStatus: "None",
-    territory: "",
-    vendorCategory: "",
-    contactPerson: "",
-    registrationDate: "",
-    gstCategory: "Registered",
-    gstSuspend: false,
-    cin: "",
-  };
+    const initialValues = {
+      gstNo: "",
+      name: "",
+      printName: "",
+      identification: "",
+      code: "",
+      underLedger: "",
+      vendorCommon: false,
+      isSubVendor: false,
+      firmStatus: "None",
+      territory: "",
+      vendorCategory: "",
+      contactPerson: "",
+      registrationDate: "",
+      gstCategory: "Registered",
+      gstSuspend: false,
+      cin: "",
+      image: null,
+      logistics: {
+        destination: "",
+        shippingMode: "",
+        shippingCompany: "",
+        shippingTracking: "",
+        shippingDate: "",
+        shippingCharges: 0,
+        vehicleNo: "",
+        chargeType: "",
+        documentThrough: "",
+        portOfLanding: "",
+        portOfDischarge: "",
+        noOfPackets: 0,
+        weight: 0,
+        distance: 0,
+        eWayInvoiceNo: "",
+        eWayInvoiceDate: "",
+        eWayCancelDate: "",
+        irnNo: "",
+        qrCode: "",
+        overheadExpenses: {
+          customDuty: 0,
+          chaPayment: 0,
+          freight: 0,
+          insurance: 0,
+          handling: 0,
+          documentationCharges: 0,
+          bankCharges: 0,
+          customExpenses: 0,
+          loadingUnloading: 0,
+          otherCharges: 0,
+        }
+      }
+    };
 
   const [toggle, setToggle] = useState({
     value: "",
@@ -87,7 +121,7 @@ const VendorForm = () => {
                 />
                 <div className="form-group">
                   <label>Name *</label>
-                  <div style={{ width: "58%", display: "flex", justifyContent: "space-between" }}>
+                  <div className="icon-input-field">
                     <Field name="name" className="form-control custom-field" />
                     <span className="add-icon">
                       <PublicIcon style={{ color: 'white' }} />
@@ -113,7 +147,7 @@ const VendorForm = () => {
 
                 <div className="form-group">
                   <label>Code *</label>
-                  <div style={{ width: "58%", display: "flex", justifyContent: "space-between" }}>
+                  <div className="icon-input-field">
 
                     <Field name="code" className="form-control custom-field" />
                     <span className="add-icon">
@@ -125,7 +159,7 @@ const VendorForm = () => {
 
                 <div className="form-group">
                   <label>Under Ledger *</label>
-                  <div style={{ width: "58%", display: "flex", justifyContent: "space-between" }}>
+                  <div className="icon-input-field">
                     <Field
                       name="underLedger"
                       as="select"
@@ -217,7 +251,17 @@ const VendorForm = () => {
             <div className="basic-section-profile">
               <div style={{ width: "50%", marginTop: "10%" }}>
                 <PersonIcon style={{ fontSize: 40, color: 'deepskyblue', height: "210px", width: "210px", backgroundColor: "lightgray" }} />
-                <input type="file" id="file" className="file-upload" accept="image/*" />
+                <input
+                 type="file" 
+                 id="file" 
+                 className="file-upload" 
+                 accept="image/*" 
+                 onChange={(event) => {
+                   const file = event.currentTarget.files[0];
+                   setFieldValue("image", file); 
+                 }} 
+                
+                />
                 <label htmlFor="file" className="custom-file-upload">Browse</label>
               </div>
             </div>
@@ -257,7 +301,7 @@ const VendorForm = () => {
 
             </div>
           </div>
-          <Logistics />
+          <Logistics setFieldValue={setFieldValue}/>
           <button type="submit" className="submit-button">
             Submit
           </button>

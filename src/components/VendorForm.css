@@ -16,12 +16,11 @@
 
 label {
   display: block;
-  font-weight: bold;
   margin-bottom: 5px;
 }
 
 .form-control {
-  width: 55%;
+  width: 55.5%;
   padding: 8px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
@@ -140,4 +139,9 @@ display: flex;
 width: 50%;
 height: 100%; 
 flex-direction: column
+}
+.icon-input-field{
+   width: 57.5%;
+    display: flex;
+     justify-content: space-between
 }
